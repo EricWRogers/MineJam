@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 37, 6 )
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.303226, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.312988, 0.264084, 0.264084, 1, 0.574707, 0.574707, 0.574707, 1 )
+
+[sub_resource type="GradientTexture" id=3]
+gradient = SubResource( 2 )
+width = 12
+
+[sub_resource type="QuadMesh" id=4]
+size = Vector2( 69.092, 37.901 )
+
+[node name="Cart" type="Area2D"]
+position = Vector2( 0, -18.861 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -25 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="CollisionShape2D"]
+rotation = -1.5708
+scale = Vector2( 1, 73.668 )
+texture = SubResource( 3 )
+
+[node name="Bottom" type="MeshInstance2D" parent="."]
+mesh = SubResource( 4 )
