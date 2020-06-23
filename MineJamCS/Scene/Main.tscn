@@ -1,7 +1,0 @@
-[gd_scene format=2]
-
-[node name="Main" type="Node2D"]
-
-[node name="SpawnTimer" type="Timer" parent="."]
-
-[node name="CountDownTimer" type="Timer" parent="."]
